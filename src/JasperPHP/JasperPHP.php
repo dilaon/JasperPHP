@@ -110,7 +110,7 @@ class JasperPHP
                 $command .= " -u " . $db_connection['username'];
 
             if( isset($db_connection['password']) && !empty($db_connection['password']) )
-                $command .= " -p " . $db_connection['password'];
+                $command .= " -p '" . $db_connection['password'] . "'";
 
             if( isset($db_connection['host']) && !empty($db_connection['host']) )
                 $command .= " -H " . $db_connection['host'];
